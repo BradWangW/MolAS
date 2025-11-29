@@ -1,0 +1,37 @@
+# Core ML
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.1
+scikit-learn==1.6.1
+
+# Graph libraries
+torch-geometric==2.6.1
+dgl==2.1.0
+
+# Chemistry
+rdkit==2024.9.4
+biopython==1.85
+
+# Sequence / embedding utils
+esm>=1.0.5
+
+# Logging / utils
+tqdm==4.67.1
+pyyaml==6.0.2
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# Additional libraries used in code
+einops==0.8.0
+tensorboard
+ pytorch-lightning>=2.2
+ statsmodels>=0.14
+ tabulate==0.9.0
+ pathlib2
+
+# Optional (remove if unused)
+graphein==1.7.7
+pyaaisc==1.2
+
+# PyTorch must be installed manually
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124

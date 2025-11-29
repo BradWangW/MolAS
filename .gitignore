@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Data directory
+dataset/
+
+# Model files
+modelweights/
+
+# Output files and logs
+*.pth
+# System files
+.DS_Store
+
+# Ignore all IPython profiles except this one
+profile_default/
+!profile_default/ipython_config.py
+
+# Miscellaneous
+*.swp
+*.swo
+*.bak
+
+lightning_logs/
+point_based/
+batch_evaluation_results/
