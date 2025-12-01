@@ -30,7 +30,7 @@ molas/
 
 ## **Installation**
 
-Create a new environment and install PyTorch **separately**, since `environment.yaml` does not specify a CUDA build.
+Create a new environment and install PyTorch **separately**.
 
 ```bash
 # 1) Create env
@@ -93,7 +93,7 @@ Configure:
 * `test=1` to run test-only mode and export reports
 * `version=0` to set the initial version of the 5-version bundle for testing
 
-##### **Version Directory**
+#### **Version Directory**
 
 To reproduce the results using the Zenodo-released checkpoints, set `version` according to the target benchmark and post-processing mode. Each entry refers to a contiguous 5-checkpoint bundle (`version`–`version+4`).
 
@@ -112,10 +112,6 @@ To reproduce the results using the Zenodo-released checkpoints, set `version` ac
 | PoseX-CD      | Relaxation          | 25        | 25–29          |
 | PoseBusters   | No                  | 10        | 10–14          |
 | PoseBusters   | Energy minimisation | 15        | 15–19          |
-
----
-
-If you'd like, I can also generate a short “What each variable actually controls internally” section — or restructure the table into grouped subsections for even clearer reading.
 
 
 ### **Single-GPU Example**
