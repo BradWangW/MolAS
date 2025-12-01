@@ -68,12 +68,9 @@ Then update the `data_path` variables in `data/dataset.py`.
     └── {benchmark}_rmsd.csv         # RMSD targets (per-algorithm)
 ```
 
-**Notes**
+### Notes on checkpoints
 
-* Graph filenames follow: `pyg_graph_{pdbid}_{ligandid}_esmc_600m.pt`, where
-  `{pdbid}` = 4-letter PDB code and `{ligandid}` = ligand identifier (e.g., CCD).
-* CSVs provide per-algorithm composite targets used for training.
-* Checkpoints (`*.ckpt`) should be placed **parallel** to the dataset directory, not inside the repository root.
+Log folder of checkpoints (named *lightning_logs*) should be placed inside the repository root, **parallel** to this README.md.
 
 ---
 
@@ -94,6 +91,32 @@ Configure:
 * `incl_columns` (algorithm list; ensure count matches `--num_classes`)
 * `devices` (e.g., `"0,1,2,3"` for torchrun)
 * `test=1` to run test-only mode and export reports
+* `version=0` to set the initial version of the 5-version bundle for testing
+
+##### **Version Directory**
+
+To reproduce the results using the Zenodo-released checkpoints, set `version` according to the target benchmark and post-processing mode. Each entry refers to a contiguous 5-checkpoint bundle (`version`–`version+4`).
+
+| Benchmark     | Post-process        | `version` | Version bundle |
+| ------------- | ------------------- | --------- | -------------- |
+| MOAD-curated  | —                   | 5         | 5–9            |
+| PoseX + Astex | Mixed               | 219       | 219–223        |
+| PoseX-SD      | Mixed               | 5         | 5–9            |
+| PoseX-CD      | Mixed               | 5         | 5–9            |
+| PoseBusters   | Mixed               | 20        | 20–24          |
+| PoseX + Astex | No                  | 209       | 209–213        |
+| PoseX + Astex | Relaxation          | 214       | 214–218        |
+| PoseX-SD      | No                  | 10        | 10–14          |
+| PoseX-SD      | Relaxation          | 30        | 30–34          |
+| PoseX-CD      | No                  | 30        | 30–34          |
+| PoseX-CD      | Relaxation          | 25        | 25–29          |
+| PoseBusters   | No                  | 10        | 10–14          |
+| PoseBusters   | Energy minimisation | 15        | 15–19          |
+
+---
+
+If you'd like, I can also generate a short “What each variable actually controls internally” section — or restructure the table into grouped subsections for even clearer reading.
+
 
 ### **Single-GPU Example**
 
