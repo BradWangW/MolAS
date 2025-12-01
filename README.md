@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 Download the processed MolAS dataset and trained checkpoints from:
 
-**Zenodo: <INSERT_ZENODO_LINK>**
+**Zenodo: https://zenodo.org/records/17760688**
 
 Then update the `data_path` variables in `data/dataset.py`.
 
