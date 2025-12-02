@@ -10,19 +10,21 @@ This repository contains the full training, evaluation, and analysis code used i
 ```
 molas/
 │
-├── main.py              # Training / testing entry point (PyTorch Lightning)
-├── main.sh              # 5-fold and multi-GPU script (torchrun presets)
+├── main.py                 # Training / testing entry point (PyTorch Lightning)
+├── main.sh                 # 5-fold and multi-GPU script (torchrun presets)
 │
 ├── data/
-│   ├── dataset.py       # Dataset construction from CSVs and precomputed graphs
-│   ├── data_interface.py# LightningDataModule with K-Fold / split support
+│   ├── dataset.py          # Dataset construction from CSVs and precomputed graphs
+│   ├── data_interface.py.  # LightningDataModule with K-Fold / split support
 │   └── ...
 │
-├── model/               # MolAS architectures and loss functions
+├── model/                  # MolAS architectures and loss functions
+│   └── ...
 │
-├── stats_test.py        # Fold-concatenated reporting and paired statistics
-├── environment.yaml     # Basic environment (PyTorch installed separately)
-├── requirements.txt     # Python dependencies
+├── embedding_generation/   # Scripts for generating ESM and ChemBERTa embeddings (for completeness)
+│
+├── stats_test.py           # Fold-concatenated reporting and paired statistics
+├── environment.yaml        # Python dependencies
 └── README.md
 ```
 
@@ -70,7 +72,7 @@ Then update the `data_path` variables in `data/dataset.py`.
 
 ### Notes on checkpoints
 
-Log folder of checkpoints (named *lightning_logs*) should be placed inside the repository root, **parallel** to this README.md.
+Log folder of checkpoints (named `lightning_logs`) should be placed inside the repository root, **parallel** to this README.md.
 
 ---
 
