@@ -1,5 +1,9 @@
 # **MolAS: Molecular Embedding–Based Algorithm Selection in Protein–Ligand Docking**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2512.02328-b31b1b.svg)](https://arxiv.org/abs/2512.02328)
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.17760688-004d7f.svg)](https://zenodo.org/records/17760688)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 MolAS is a learning-based framework that predicts, for each protein–ligand pair, which docking or pose-generation method is most likely to succeed.
 This repository contains the full training, evaluation, and analysis code used in the accompanying paper *Molecular Embedding–Based Algorithm Selection in Protein–Ligand Docking*.
 
