@@ -174,12 +174,6 @@ python main.py \
 
 ---
 
-## **License**
-
-Apache License 2.0.
-
----
-
 ## **Acknowledgements**
 
 MolAS uses embeddings from **ESM-C** and **ChemBERTa**, and builds on PyTorch, PyTorch Lightning, and PyTorch Geometric.
